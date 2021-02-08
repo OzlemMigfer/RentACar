@@ -10,7 +10,6 @@ namespace DataAccess.Abstract
     {
         List<T> GetAll(Expression<Func<T,bool>> filter=null); 
         T Get(Expression<Func<T, bool>> filter);
-        List<T> GetById();
         void Add(T entity);
         void UpDate(T entity);
         void Delete(T entity);

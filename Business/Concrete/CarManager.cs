@@ -1,6 +1,5 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
-using DataAccess.Concrete;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -40,14 +39,24 @@ namespace Business.Concrete
 
         public void Add(Car car)
         {
-            if(car.DailyPrice> 0 && car.Description.Length >= 2)
+            if(car.DailyPrice> 0 )
             {
                 _carDal.Add(car);
             }
             else
             {
-                Console.WriteLine("Araba günlük fiyatı 0'dan büyük ve araba ismi minimum 2 karakter olmalıdır!!!");
+                Console.WriteLine("Daily car rental fee should be more than 0!!!");
             }
+        }
+
+        public void Delete(Car car)
+        {
+            _carDal.Delete(car);
+        }
+
+        public void Update(Car car)
+        {
+            _carDal.UpDate(car);
         }
     }
 }

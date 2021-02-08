@@ -49,11 +49,6 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public List<Car> GetById()
-        {
-            throw new NotImplementedException();
-        }
-
         public void UpDate(Car entity)
         {
             using (ReCapProjectDatabaseContext context = new ReCapProjectDatabaseContext())
