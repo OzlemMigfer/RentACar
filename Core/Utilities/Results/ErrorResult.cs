@@ -6,7 +6,7 @@ namespace Core.Utilities.Results
 {
     public class ErrorResult:Result
     {
-        public ErrorResult(string messages) : base(false, messages)//sonuç+mesaj
+        public ErrorResult(string message) : base(false, message)//sonuç+mesaj
         {
 
         }
